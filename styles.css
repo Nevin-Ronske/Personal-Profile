@@ -1,8 +1,11 @@
 /* Define root-level CSS variables for consistent styling across the site */
 :root {
-    --text-color: #202020;          /* Sets the main text color */
-    --link-color: #4267B3;          /* Sets the default color for links */
-    --background-color: #E9EBEE;    /* Sets the background color */
+    --text-color: #202020;
+    /* Sets the main text color */
+    --link-color: #4267B3;
+    /* Sets the default color for links */
+    --background-color: #E9EBEE;
+    /* Sets the background color */
 }
 
 /* Reset default margin and padding for all elements, set box-sizing to include padding and borders, 
@@ -11,8 +14,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- /* Red border for layout debugging */
-    outline: solid red 2px;   
+    /* Red border for layout debugging */
+    /* outline: solid red 2px;    */
 }
 
 /* Enables smooth scrolling for anchor links */
@@ -24,6 +27,7 @@ html {
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--background-color);
+    max-width: 1800px;
 }
 
 /* Styles links with no underline and sets their color */
@@ -32,14 +36,22 @@ a {
     color: var(--text-color);
 }
 
-/* Navigation Bar */
+/****************** Navigation Bar ********************/
+/* ************************************************** */
+/* ************************************************** */
 nav {
-    display: flex;                       /* Enables flex layout */
-    justify-content: space-between;      /* Spaces out items evenly */
-    padding: 0 50px;                     /* Adds padding on left and right */
-    height: 80px;                        /* Sets a fixed height */
-    align-items: center;                 /* Aligns items vertically in the center */
-    margin-bottom: 6rem;                 /* Adds space below the navbar */
+    display: flex;
+    /* Enables flex layout */
+    justify-content: space-between;
+    /* Spaces out items evenly */
+    padding: 0 50px;
+    /* Adds padding on left and right */
+    height: 80px;
+    /* Sets a fixed height */
+    align-items: center;
+    /* Aligns items vertically in the center */
+    margin-bottom: 6rem;
+    /* Adds space below the navbar */
 }
 
 /* Styles left-aligned navigation links */
@@ -47,19 +59,21 @@ nav .left a {
     color: var(--text-color);
     font-size: 30px;
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* Styles right-aligned navigation links */
 nav .right a {
     text-decoration: none;
     color: var(--text-color);
-    margin: 0 10px;                      /* Adds space between links */
+    margin: 0 10px;
+    /* Adds space between links */
 }
 
 /* Styles the last link in the right nav with a solid background and rounded corners */
 nav .right a:last-child {
-    color: var(--background-color);      /* Contrasts with background */
+    color: var(--background-color);
+    /* Contrasts with background */
     background-color: var(--text-color);
     padding: 5px 15px;
     border-radius: 8px;
@@ -70,19 +84,25 @@ nav .right a span {
     margin-left: 5px;
 }
 
-/* Section 1: About-Me */
+/******************** About-Me ************************/
+/* ************************************************** */
+/* ************************************************** */
+
 .about-me {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    margin: 50px 0;                      /* Adds vertical spacing */
-    gap: 6rem;                           /* Adds space between child elements */
+    margin: 50px 0;
+    /* Adds vertical spacing */
+    gap: 6rem;
+    /* Adds space between child elements */
 }
 
 /* Text section within the About-Me section */
 .about-me .text {
-    flex: 5;                             /* Occupies 5 parts of the flex layout */
+    flex: 5;
+    /* Occupies 5 parts of the flex layout */
 }
 
 /* Styles the heading within the About-Me text */
@@ -98,33 +118,212 @@ nav .right a span {
 /* Styles individual links in the About-Me section */
 .about-me .text .links a {
     display: inline-block;
-    padding: 5px 20px;                   /* Adds padding inside the link */
-    border: 2px solid var(--link-color); /* Border matches link color */
-    margin-right: 10px;                  /* Right spacing between links */
-    margin-bottom: 10px;                 /* Bottom spacing between rows */
-    transition: .1s;                     /* Adds a quick transition on hover */
+    padding: 5px 20px;
+    /* Adds padding inside the link */
+    border: 2px solid var(--link-color);
+    /* Border matches link color */
+    margin-right: 10px;
+    /* Right spacing between links */
+    margin-bottom: 10px;
+    /* Bottom spacing between rows */
+    transition: .1s;
+    /* Adds a quick transition on hover */
 }
 
 /* Changes link styles on hover */
 .about-me .text .links a:hover {
-    color: var(--text-color);  
-    border: 2px solid var(--text-color); /* Border changes color on hover */
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    /* Border changes color on hover */
 }
 
 /* Photo section within the About-Me section */
 .about-me .photo {
-    flex: 2;                             /* Occupies 2 parts of the flex layout */
+    flex: 2;
+    /* Occupies 2 parts of the flex layout */
     display: flex;
-    justify-content: right;              /* Aligns photo to the right */
+    justify-content: right;
+    /* Aligns photo to the right */
 }
 
 /* Styles the photo inside the About-Me section */
 .about-me .photo img {
-    width: 300px;                        /* Sets a fixed width for the image */
-    border-radius: 50%;                  /* Makes the image circular */
+    width: 300px;
+    /* Sets a fixed width for the image */
+    border-radius: 50%;
+    /* Makes the image circular */
 }
 
-/* Responsive Styles */
+/*******************  My Skills ***********************/
+/* ************************************************** */
+/* ************************************************** */
+.skills-section {
+    margin-bottom: 5rem;
+}
+
+.skills-section h2 {
+    margin-top: 10rem;
+    text-align: center;
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+.skills-section p {
+    text-align: center;
+    margin: 0 40px;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+.skills-section .skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.skills-section .skill div {
+    margin-right: 2rem;
+    font-size: 28px;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+
+}
+
+.skills-section .skill .html-5 i {
+    color: orange;
+
+    margin-left: 10px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.skills-section .skill #id1 {
+
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-align: center;
+
+}
+
+.skills-section .skill .css i {
+    color: #1e90ff;
+    background-color: var(--background-color);
+    margin-left: 10px;
+}
+
+.skills-section .skill #id2 {
+
+    font-size: 1.5rem;
+    margin-right: 15px;
+    margin-bottom: 5rem;
+
+}
+
+.skills-section .skill .java i {
+    color: #1e90ff;
+    color: red;
+    background-color: var(--background-color);
+    margin-left: 10px;
+}
+
+.skills-section .skill #id4 {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.skills-section .skill .java-script i {
+    color: #F0DB4F;
+    background-color: #323330;
+    margin-left: 10px;
+    border: 1px solid black;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.skills-section .skill #id3 {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.skills-section .skill .react-js i {
+    color: skyblue;
+    border: 1px whit solid;
+    background-color: var(--background-color);
+    margin-left: 10px;
+}
+
+.skills-section .skill #id5 {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/********************* Contact ************************/
+/* ************************************************** */
+/* ************************************************** */
+.contact {
+    padding: 0 50px;
+    margin-bottom: 1000px;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.contact h2 {
+    font-size: 45px;
+    /* text-align: center; */
+    text-decoration: underline;
+    text-align: center;
+}
+
+.contact .group {
+    display: flex;
+    gap: 50px;
+
+}
+
+.contact .group .text {
+    flex: 3;
+    margin-top: 1.5rem;
+}
+
+.contact .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.contact .group form input,
+.contact .group form textarea {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    ;
+    border: 2px solid var(--link-color);
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact .group form button {
+    font-size: 1rem;
+    color: var(--background-color);
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10pc;
+}
+
+.contact .group form button:hover {
+    filter: brightness(.9);
+}
+
+/**************** Responsive Styles *******************/
+/* ************************************************** */
+/* ************************************************** */
 
 /* Medium screens (max-width 850px): Adjusts About-Me heading size */
 @media (max-width: 850px) {
@@ -136,27 +335,42 @@ nav .right a span {
 /* Small screens (max-width 740px): Stacks the About-Me text and photo vertically */
 @media (max-width: 740px) {
     .about-me {
-        flex-direction: column-reverse;  /* Text appears below the photo */
+        flex-direction: column-reverse;
+        /* Text appears below the photo */
     }
 }
 
 /* Very small screens (max-width 600px): Adjusts navbar for better mobile display */
 @media (max-width: 600px) {
     nav {
-        padding: 0 15px;                 /* Reduces padding for small screens */
+        padding: 0 15px;
+        /* Reduces padding for small screens */
     }
 
     nav .right a {
-        font-size: 22px;                 /* Decreases font size for right nav links */
+        font-size: 22px;
+        /* Decreases font size for right nav links */
     }
 
     nav .right a:last-child {
-        color: var(--text-color);        /* Changes color of the last link */
-        background-color: transparent;   /* Removes background color */
-        padding: 0;                      /* Removes padding */
+        color: var(--text-color);
+        /* Changes color of the last link */
+        background-color: transparent;
+        /* Removes background color */
+        padding: 0;
+        /* Removes padding */
     }
 
     nav .right a span {
-        display: none;                   /* Hides the span content */
+        display: none;
+        /* Hides the span content */
     }
+}
+
+.contact .group {
+    flex-direction: column;
+}
+
+.contact {
+    padding: 0 20px;
 }
