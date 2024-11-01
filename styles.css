@@ -102,6 +102,7 @@ nav .right a span {
 /* Text section within the About-Me section */
 .about-me .text {
     flex: 5;
+    font-size: 1.1rem;
     /* Occupies 5 parts of the flex layout */
 }
 
@@ -265,7 +266,7 @@ nav .right a span {
 /* ************************************************** */
 .contact {
     padding: 0 50px;
-    margin-bottom: 1000px;
+    margin-bottom: 500px;
     margin-left: 5rem;
     margin-right: 5rem;
 }
@@ -275,6 +276,8 @@ nav .right a span {
     /* text-align: center; */
     text-decoration: underline;
     text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .contact .group {
@@ -286,40 +289,53 @@ nav .right a span {
 .contact .group .text {
     flex: 3;
     margin-top: 1.5rem;
+    font-size: 18px;
 }
-
-.contact .group form {
-    flex: 3;
+.email-header {
     display: flex;
-    flex-direction: column;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    justify-content: center;
+    font-size: 45px;
+    text-decoration: underline;
 }
 
-.contact .group form input,
-.contact .group form textarea {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    ;
-    border: 2px solid var(--link-color);
-    padding: 10px;
-    margin-bottom: 15px;
-    outline: none;
-    resize: none;
+.email-me {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
 }
-
-.contact .group form button {
-    font-size: 1rem;
+.email-icon {
+    margin-right: 7px;
     color: var(--background-color);
-    background-color: var(--link-color);
-    border: none;
-    height: 50px;
-    cursor: pointer;
-    border-radius: 10pc;
+    background-color: var(--text-color);
+    /* border: 3px solid var(--text-color); */
+    padding-left:5px;
+    padding-right: 4px;
+    border-radius: 8px;
 }
 
-.contact .group form button:hover {
-    filter: brightness(.9);
+.call-me-header {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    text-decoration: underline;
 }
+.call-me{
+margin-top: 1rem;
+display: flex;
+justify-content: center;
+font-size: 2rem;
+}
+
+.phone-icon {
+    margin-right: 7px;
+    /* border: 3px solid var(--text-color); */
+    padding-left:5px;
+
+}
+
+
 
 /**************** Responsive Styles *******************/
 /* ************************************************** */
